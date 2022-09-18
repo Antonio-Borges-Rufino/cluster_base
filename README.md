@@ -32,36 +32,126 @@ SEU CLIENTE SSH
 ## 4. INSTALAR VIRTUAL ENV + PANDAS + JUPYTER
 1. CRIE UMA PASTA PARA O PROJETO
 
-'''
+```
 mkdir "nome_da_pasta" 
-'''
+```
 
 2. ENTRE NA PASTA
-	2.1 comando: cd "nome_da_pasta"
+	
+```
+cd "nome_da_pasta"
+```
 3. INSTALE O GERENCIADOR DE PACOTES DO PYTHON
-	3.1 comando: yum install python3-pip
+	
+```
+yum install python3-pip
+```
 4. INSTALE O AMBIENTE VIRTUAL NA PASTA
-	4.1 comando: virtualenv -p python3 "nome"
+
+```
+virtualenv -p python3 "nome"
+```
 5. PARA ATIVAR A VIRTUAL ENV
-	5.1 comando: source "nome"/bin/activate
+
+```
+source "nome"/bin/activate
+```
 6. INSTALE O PANDAS NO AMBIENTE VIRTUAL
-	6.1 comando: pip install pandas
+
+```
+pip install pandas
+```
 7. ATUALIZE E ATIVE OS PACOTES DE COMPILADORES
-	7.1 comando: dnf makecache
-	7.2 comando: dnf install gcc python3-devel kernel-headers-$(uname -r)
+
+```
+dnf makecache
+dnf install gcc python3-devel kernel-headers-$(uname -r)
+```
 8. INSTALE UMA VERSÃO DE UM PACOTE CHAMADO pyzmq
-	8.1 comando: pip install pyzmq==23.2.1
+
+```
+pip install pyzmq==23.2.1
+```
 9. INSTALE O JUPYTER
-	9.1 comando: pip install jupyter
+
+```
+pip install jupyter
+```
 10. PREPARE O JUPYTER 
-	10. comando: ipython kernel install --name coleta_dados --user
+
+```
+ipython kernel install --name coleta_dados --user
+```
 11. SAIA DA SUA CONEXÃO SSH ATUAL E INICIE UMA NOVA
-	11.1 comando: ssh -L 8000:localhost:8888 root@192.168.1.109
+
+```
+ssh -L 8000:localhost:8888 root@192.168.1.109
+```
 12. VA ATÉ A PASTA DE SEU AMBIENTE VIRTUAL E ENTRE NO SEU AMBIENTE VIRTUAL
 13. INICIE SEU JUPYTER NOTEBOOK DENTRO DO SEU AMBIENTE VIRTUAL
-	13.1 comando: jupyter notebook --allow-root
+
+```
+jupyter notebook --allow-root
+```
 14. AGORA NO NAVEGADOR DO SEU COMPUTADOR HOST, COLOQUE A URL DO JUPYTER SUBISTINDO AS PORTAS 8888 POR 8000
 
 ## 5. INSTALAR MYSQL
+1. ATUALIZE OS FLUXOS DO CENTOS	
+
+```
+dnf upgrade --refresh -y
+```
+2. INSTALE A VERSÃO DE COMUNIDADE DO MYSQL
+
+```
+dnf install mysql mysql-server -y
+```
+3. ATIVE O MYSQL
+
+```
+systemctl enable mysqld --now
+```
+4. VERIFIQUE SE ELE ESTA RODANDO
+
+```
+systemctl status mysqld
+```
+5. SE PRECISAR PARAR O MYSQL POR ALGUM MOTIVO
+
+```
+systemctl stop mysqld
+```
+6. SE PRECISAR LIGAR DE NOVO
+
+```
+systemctl start mysqld
+```
+7. DESABILITE A ATIVAÇÃO DO MYSQL AO LIGAR O SISTEMA
+
+```
+systemctl disable mysqld
+```
+8. HABILITE A ATIVAÇÃO DO MYSQL AO LIGAR O SISTEMA
+
+```
+systemctl enable mysqld
+```
+9. RESTARTAR O MYSQL
+
+```
+systemctl restart mysqld
+```
 
 ## 6. CONFIGURAR A CONEXÃO VIA PYTHON 
+1. CONECTE A SUA MÁQUINA VIRTUAL 
+```
+ssh -L 8000:localhost:8888 root@192.168.1.109
+```
+2. ENTRE NO SEU CONTAINER PYTHON
+```
+source "caminho_ambiente_virtual/activate"
+```
+3. DENTRO DO AMBIENTE VIRTUAL, INSTALE O PACOTE MYSQL-CONNECTOR
+```
+pip install mysql-connector-python
+```
