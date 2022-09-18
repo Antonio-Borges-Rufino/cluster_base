@@ -31,9 +31,11 @@ SEU CLIENTE SSH
 
 ## 4. INSTALAR VIRTUAL ENV + PANDAS + JUPYTER
 1. CRIE UMA PASTA PARA O PROJETO
-	 '''
-	 mkdir "nome_da_pasta" 
-	'''
+
+'''
+mkdir "nome_da_pasta" 
+'''
+
 2. ENTRE NA PASTA
 	2.1 comando: cd "nome_da_pasta"
 3. INSTALE O GERENCIADOR DE PACOTES DO PYTHON
