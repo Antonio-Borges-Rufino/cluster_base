@@ -1,2 +1,4 @@
-# cluster_base
-Configurações de um cluster virtualizado que criei para poder realizar os projetos de big-data e datascience
+# cluster_base: Esse é a construção do cluster que eu utilizo para realizar meus processamentos
+## ========================================================================================================================
+##						                1. RECURSOS NECESSÁRIOS
+## ========================================================================================================================
