@@ -78,7 +78,8 @@ cd "nome_da_pasta"
 3. INSTALE O GERENCIADOR DE PACOTES DO PYTHON
 	
 ```
-yum install python3-pip
+sudo yum install python3-pip
+sudo yum install python3-virtualenv
 ```
 4. INSTALE O AMBIENTE VIRTUAL NA PASTA
 
@@ -95,39 +96,32 @@ source "nome"/bin/activate
 ```
 pip install pandas
 ```
-7. ATUALIZE E ATIVE OS PACOTES DE COMPILADORES
 
-```
-dnf makecache
-dnf install gcc python3-devel kernel-headers-$(uname -r)
-```
-8. INSTALE UMA VERSÃO DE UM PACOTE CHAMADO pyzmq
-
-```
-pip install pyzmq==23.2.1
-```
-9. INSTALE O JUPYTER
+7. INSTALE O JUPYTER
 
 ```
 pip install jupyter
 ```
-10. PREPARE O JUPYTER 
 
+8. PREPARE O JUPYTER 
+9. 
 ```
 ipython kernel install --name coleta_dados --user
 ```
-11. SAIA DA SUA CONEXÃO SSH ATUAL E INICIE UMA NOVA
+
+9. SAIA DA SUA CONEXÃO SSH ATUAL E INICIE UMA NOVA
 
 ```
-ssh -L 8000:localhost:8888 root@192.168.1.109
+ssh -L 8000:localhost:8888 "nome_usuario"@"ip_maquina_virtual"
 ```
-12. VA ATÉ A PASTA DE SEU AMBIENTE VIRTUAL E ENTRE NO SEU AMBIENTE VIRTUAL
-13. INICIE SEU JUPYTER NOTEBOOK DENTRO DO SEU AMBIENTE VIRTUAL
+
+10. VA ATÉ A PASTA DE SEU AMBIENTE VIRTUAL E ENTRE NO SEU AMBIENTE VIRTUAL
+11. INICIE SEU JUPYTER NOTEBOOK DENTRO DO SEU AMBIENTE VIRTUAL
 
 ```
-jupyter notebook --allow-root
+jupyter notebook 
 ```
-14. AGORA NO NAVEGADOR DO SEU COMPUTADOR HOST, COLOQUE A URL DO JUPYTER SUBISTINDO AS PORTAS 8888 POR 8000
+12. AGORA NO NAVEGADOR DO SEU COMPUTADOR HOST, COLOQUE A URL DO JUPYTER SUBISTINDO AS PORTAS 8888 POR 8000
 
 ## 5. INSTALAR MYSQL
 1. ATUALIZE OS FLUXOS DO CENTOS	
