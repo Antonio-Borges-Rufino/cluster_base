@@ -104,7 +104,7 @@ pip install jupyter
 ```
 
 8. PREPARE O JUPYTER 
-9. 
+
 ```
 ipython kernel install --name coleta_dados --user
 ```
