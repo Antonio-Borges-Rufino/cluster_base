@@ -48,6 +48,16 @@
 	```
 	tar -xf Python-$3.9.0.tgz
 	```
+	```
+	cd Python-3.9.0
+	./configure --enable-optimizations
+	```
+	```
+	make -j 4
+	```
+	```
+	sudo make altinstall
+	```
 
 
 ## 4. INSTALAR VIRTUAL ENV + PANDAS + JUPYTER
