@@ -127,47 +127,47 @@ jupyter notebook
 1. ATUALIZE OS FLUXOS DO CENTOS	
 
 ```
-dnf upgrade --refresh -y
+sudo dnf upgrade --refresh -y
 ```
 2. INSTALE A VERSÃO DE COMUNIDADE DO MYSQL
 
 ```
-dnf install mysql mysql-server -y
+sudo dnf install mysql mysql-server -y
 ```
 3. ATIVE O MYSQL
 
 ```
-systemctl enable mysqld --now
+sudo systemctl enable mysqld --now
 ```
 4. VERIFIQUE SE ELE ESTA RODANDO
 
 ```
-systemctl status mysqld
+sudo systemctl status mysqld
 ```
 5. SE PRECISAR PARAR O MYSQL POR ALGUM MOTIVO
 
 ```
-systemctl stop mysqld
+sudo systemctl stop mysqld
 ```
 6. SE PRECISAR LIGAR DE NOVO
 
 ```
-systemctl start mysqld
+sudo systemctl start mysqld
 ```
 7. DESABILITE A ATIVAÇÃO DO MYSQL AO LIGAR O SISTEMA
 
 ```
-systemctl disable mysqld
+sudo systemctl disable mysqld
 ```
 8. HABILITE A ATIVAÇÃO DO MYSQL AO LIGAR O SISTEMA
 
 ```
-systemctl enable mysqld
+sudo systemctl enable mysqld
 ```
 9. RESTARTAR O MYSQL
 
 ```
-systemctl restart mysqld
+sudo systemctl restart mysqld
 ```
 
 ## 6. CONFIGURAR A CONEXÃO VIA PYTHON 
