@@ -29,8 +29,25 @@
 5. INICIE A INSTALAÇÃO DO SISTEMA
 6. SE CONECT A SUA REDE DE INTERNET EM REDE E NOME DO HOST
 7. CRIE UM USUARIO ADMINISTRADOR EM CRIAÇÃO DE USUARIO
-8. POR PADRÃO, A INSTALAÇÃO NORMAL DO CENTOS9 JÁ POSSUI O PYTHON 3.9 INSTALADO E O SSH, ASSIM PODE-SE APENAS CONECTAR A MAQUINA VIRTUAL UTILIZANDO
-SEU CLIENTE SSH 
+8. INSTALE O PACOTE DE GERENCIAMENTO DE REDE NET-TOOLS
+	```
+	sudo yum install net-tools
+	```
+9. INSTALE O PYTHON3.9
+	```
+	sudo dnf groupinstall 'development tools'
+	```
+	```
+	sudo dnf install bzip2-devel expat-devel gdbm-devel \
+    	ncurses-devel openssl-devel readline-devel wget \
+    	sqlite-devel tk-devel xz-devel zlib-devel libffi-devel
+	```
+	```
+	wget https://www.python.org/ftp/python/3.9.0/Python-3.9.0.tgz
+	```
+	```
+	tar -xf Python-$3.9.0.tgz
+	```
 
 
 ## 4. INSTALAR VIRTUAL ENV + PANDAS + JUPYTER
