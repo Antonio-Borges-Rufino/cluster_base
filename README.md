@@ -183,3 +183,38 @@ source "caminho_ambiente_virtual/activate"
 ```
 pip install mysql-connector-python
 ```
+## 7. INSTALAR MONGODB
+1. CONFIGURE O REPOSITORIO 
+```
+sudo nano /etc/yum.repos.d/mongodb-org-6.0.repo
+```
+2. DENTRO DESSE ARQUIVO COLOQUE
+```
+[mongodb-org-6.0]
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/6.0/x86_64/
+gpgcheck=1
+enabled=1
+gpgkey=https://www.mongodb.org/static/pgp/server-6.0.asc
+```
+3. SALVE O ARQUIVO
+4. INSTALE
+```
+sudo yum install -y mongodb-org
+```
+5. STARTE O MONGO
+```
+sudo systemctl start mongod
+```
+6. VERIFIQUE O STATUS
+```
+sudo systemctl status mongod
+```
+7. CONFIGURE PARA LIGAR AO INICIAR
+```
+sudo systemctl enable mongod
+```
+8. PARA USAR O MONGO
+```
+mongosh
+```
