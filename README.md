@@ -58,7 +58,10 @@
 	```
 	sudo make altinstall
 	```
-
+10. TESTE O PYTHON 
+	```
+	python3.9.0 
+	```
 
 ## 4. INSTALAR VIRTUAL ENV + PANDAS + JUPYTER
 1. CRIE UMA PASTA PARA O PROJETO
