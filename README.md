@@ -218,3 +218,16 @@ sudo systemctl enable mongod
 ```
 mongosh
 ```
+## 8. CONFIGURAR A CONEXÃO VIA PYTHON-MONGODB
+1. CONECTE A SUA MÁQUINA VIRTUAL 
+```
+ssh -L 8000:localhost:8888 antonio@"ip_maquina"
+```
+2. ENTRE NO SEU CONTAINER PYTHON
+```
+source "caminho_ambiente_virtual/activate"
+```
+3. DENTRO DO AMBIENTE VIRTUAL, INSTALE O PACOTE PYMONGO
+```
+pip install pymongo
+```
