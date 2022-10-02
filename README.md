@@ -243,7 +243,7 @@ pip install pymongo
  sudo docker run hello-world
 ```
 
-##10. Criar container cloudera/docker
+## 10. Criar container cloudera/docker
 1. Comandos:
 ```
 docker pull cloudera/quickstart:latest
