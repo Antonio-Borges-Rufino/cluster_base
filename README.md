@@ -231,3 +231,26 @@ source "caminho_ambiente_virtual/activate"
 ```
 pip install pymongo
 ```
+
+## 9. Instalar docker 
+1. Comandos:
+```
+ sudo yum remove docker docker-client  docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
+ sudo yum install -y yum-utils
+ sudo yum-config-manager  --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+ sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+ sudo systemctl start docker
+ sudo docker run hello-world
+```
+
+##10. Criar container cloudera/docker
+1. Comandos:
+```
+docker pull cloudera/quickstart:latest
+sudo docker run --hostname=quickstart.cloudera --name=hadoop --privileged=true -t -i cloudera/quickstart /usr/bin/docker-quickstart
+```
+2. Após o passo 1, pode-se usar o seguinte comando para startar o container
+```
+sudo docker start hadoop
+```
+
