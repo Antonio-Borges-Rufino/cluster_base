@@ -253,4 +253,8 @@ sudo docker run --hostname=quickstart.cloudera --name=hadoop --privileged=true -
 ```
 sudo docker start hadoop
 ```
+3. Para entrar, execute o comando:
+```
+sudo docker exec -it hadoop /usr/bin/docker-quickstart
+```
 
