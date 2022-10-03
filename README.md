@@ -257,4 +257,7 @@ sudo docker start hadoop
 ```
 sudo docker exec -it hadoop /usr/bin/docker-quickstart
 ```
-
+4. Habilite o docker 
+```
+sudo systemctl enable docker
+```
